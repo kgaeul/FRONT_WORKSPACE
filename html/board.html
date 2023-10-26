@@ -37,9 +37,21 @@
             background-color: rgba(204, 191, 155, 0.555);
         }
 
-        .board{
-           
+        .button{
+            background-color: rgba(241, 122, 118, 0.966);
+            color: white;
+            padding:10px ;
+            cursor:pointer;
+            box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.281);
+
+            /*마우스를 가져갈 시 색상 반짝이는 효과 추가*/
+            transition : background-color 0.3s, box-shadow 0.3s;
         }
+            /*마우스 호버 시 스타일 변경*/
+            button:hover {
+                    background-color : #d857578c;
+                    box-shadow: 15px 15px 5px rgba(114, 83, 85, 0.89);
+            }
 
     </style >
 </head>
@@ -58,7 +70,7 @@
                 <input type = "text" placeholder="아이디를 입력하세요">
                 
                 <input type = "password" placeholder="비밀번호를 입력하세요">
-               <button> 로그인 </button>
+               <div button> <button>로그인</button> </div>
                
             </div>
         </DIV></div>

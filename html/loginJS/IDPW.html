@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>회원가입</title>
+
+        <style>
+         @font-face {
+        font-family: 'MBC1961GulimM';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/MBC1961GulimM.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+        }   
+
+        *{
+        font-family: 'MBC1961GulimM'; 
+        text-align: center;
+        
+        }
+
+        .idpw{
+        background-color: rgb(225, 243, 243);
+        border-radius: 20px;
+        padding : 30px 0px;
+        text-align:center;
+        
+        }
+
+        h1 {
+            background-color: rgb(229, 243, 225); 
+            
+        }
+
+        </style>
+
+        <script>
+
+            
+            function submitPassword(){
+                var password = document.getElementById("password").value;
+                // 정규식을 활용해서 영문자 소/대문자 특수문자 숫자 포함하기 8~32
+                // /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,32}$/
+               
+               var passwordParttarn= /^(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,32}$/;
+               var errorPW=document.getElementById("pm");
+
+               if(!password.match(passwordParttarn)){
+                errorPW.textContent="영문자 소/대문자 특수문자 숫자 포함해서 8~32사이로 만드세요";
+                    return false;
+               }else{
+                errorPW.textContent="";
+             
+               }
+
+               var confirmpw = document.getElementById("confirmpassword").value;
+                if(password!==confirmpw){
+                    errorPW.textContent="비밀번호가 일치하지 않습니다.";
+                    return false;
+                }else{
+                    errorPW.textContent="";
+             
+
+                }
+
+                alert("회원가입이 완료되었습니다.");
+                    return true;
+            }
+
+           
+        </script>
+    </head>
+    <body>
+        <!--onsubmit : 폼이 제출될 때 JS 함수가 반환하는 값에 따라 폼이 계속 진행되거나 멈출 지 결정
+        return true: 폼이 계속 진행되지 않고 서버로 데이터가 제출됨
+        return false : 폼이 제출되지 않고 서버로 데이터가 전송되지 않음
+        -->
+        <form onsubmit="return submitPassword()">
+            <div class="work">
+            <h1 >회원가입</h1>
+            </div>
+            <div class="idpw">
+            <label for="username">아이디 : </label>
+            <input type = "text" id="username">
+            <br>
+            <br>
+            <label for="password">비밀번호 : </label>
+            <input type="password" id="password" onclick="pwmsg()">
+            
+            <!--
+
+                <p id="pm></pm>
+                p태그 안에는 비밀번호가 잘못 입력되었을 때나 비밀번호 유효한 입력을 유도하기 위해 보여지는 태그"
+
+            -->
+            <p id="pm"></p><br>
+
+            <label for="confirmpassword">비밀번호 확인 : </label>
+            <input type="password" id="confirmpassword"><br>
+            <br>
+            <input type="submit" value="제출">
+            </div>
+        </form>
+    </body>
+
+</html>

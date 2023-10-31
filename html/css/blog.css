@@ -1,0 +1,149 @@
+@font-face{
+    font-family:'DNFBitBitv2';
+    font-style:normal;font-weight:400;src:url('http://cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf')format('opentype')}
+    
+    
+    @font-face {
+        font-family: 'KCC-Ganpan';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'TTTtangsbudaejjigaeB';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/TTTtangsbudaejjigaeB.woff2') format('woff2');
+        font-weight: 700;
+        font-style: normal;
+    }
+    
+    
+    
+    *{
+        font-family: 'TTTtangsbudaejjigaeB';
+      
+    
+    
+    }
+    
+    .container{
+        width: 900px;
+        
+    }
+    
+    h1{
+    background-color: rgb(236, 231, 215);
+    border-radius:30px;
+    padding : 10px 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    color:#42300d;
+    border : 5px solid rgb(238, 183, 1);
+    box-shadow: 0 0.3em rgb(238, 183, 1), 0 0.4em rgba(15, 15, 15, 0.281);
+ 
+    }
+    
+    h2{
+    
+        text-align: center;
+        padding: 0px 0px;
+        border-radius: 50px;
+        background-color: ;
+    
+       
+    }
+    
+    
+   
+    
+    .work1{
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+        padding : 0px 0px;
+       
+    }
+    
+    .큰배경{
+        text-align: center;
+        background-color: rgb(233, 229, 216);
+        height: 500px;
+        width: 900px;
+        color:#42300d;
+        padding : 40px 10px;
+        /* border : 10px solid #f0c948; */
+        border-radius: 20px;
+        box-shadow: 0 0.1em #b4b2a8, 0 0.4em rgba(15, 15, 15, 0.281);
+    }
+    
+    .mylink{
+    padding : 30px 0px;
+       text-align: center;
+    }
+    
+    .회원가입{
+        background-color: rgb(245, 243, 239);
+        width: 60%;
+        height: 90%;
+        PADDING-top :40px;
+        margin-left: auto;
+        margin-right: 30px;
+        color:rgb(75, 65, 65);
+        border-radius: 10px; 
+        box-shadow: 0 0.1em #b4b2a8, 0 0.4em rgba(15, 15, 15, 0.281);
+      
+       
+    }
+    
+    audio{
+        diplay:block;
+        margin:0;
+        max-width:80%;
+        border-radius: 40px;
+    
+    }
+    
+    audio::-webkit-media-controls-panel{
+        background-color:#c2b793;
+
+    }
+    
+    audio::-webkit-media-controls-play-button{
+        background-color:#ffffff;
+        border-radius: 50%;
+        box-shadow:0 0 10px  #747160;
+    }
+    
+    aside{
+        float:left;
+        margin-left:10px;
+        width: 32%;
+    }
+    
+    .image{
+      
+        width:200px;
+        height: 180px;
+        margin : 10px;
+    }
+
+
+
+    button:active{
+        margin-left: 110px;
+        margin-top: 200px;
+
+    }
+    
+    button{
+        box-shadow: 0 0.4em #f1c70b, 0 0.5em rgba(15, 15, 15, 0.281);
+        border : 2px solid #f1c70b;
+        background-color: rgba(255, 232, 139, 0.678);
+        color:rgb(63, 46, 13);
+        border-radius: 20px;
+        height: 30px; width:100px;
+        margin-right:10px;
+        transition-duration: 0.3s;
+        
+    }
+    

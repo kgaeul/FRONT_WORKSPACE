@@ -18,69 +18,73 @@
     }
     
     @font-face {
-        font-family: 'Cafe24Ssurround';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+        font-family: 'SBAggroB';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
         font-weight: normal;
         font-style: normal;
     }
-    @font-face {
-        font-family: 'MBC1961GulimM';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/MBC1961GulimM.woff2') format('woff2');
-        font-weight: normal;
-        font-style: normal;
-    }
-    
+
     *{
-        font-family: 'MBC1961GulimM';
-    
-    
+        font-family: 'SBAggroB';
     }
+
+        .img-container {
+        /*이미지 가로로 나열하기*/
+        display: flex;
+        /*가로로 공간이 부족할경우 다음줄로 넘김*/
+        flex-wrap: wrap;
+        /*가로방향으로 중앙 정렬  이미지들이 수평 가운데 정렬*/
+        justify-content: center;
+    }
+    .image {
+        width: 300px;
+        height:300px;
+        margin: 10px;
+    }
+
     
     .container{
-        width: 900px;
-        
+        width: 920px;
+        background-color: rgb(238, 234, 218);
+        padding: 0px 10px;
     }
     
     h1{
-    background-color: rgb(236, 231, 215);
+    font-family: 'SBAggroB';
     border-radius:30px;
     padding : 10px 10px;
     margin-left: auto;
     margin-right: auto;
-    width: 400px;
-    color:#42300d;
-    border : 5px solid rgb(238, 183, 1);
-    box-shadow: 0 0.3em rgb(238, 183, 1), 0 0.4em rgba(15, 15, 15, 0.281);
- 
+    width: 300px;
+    color:#966c19;
+    border : 10px solid rgb(238, 183, 1);
+    box-shadow: 0 0.3em rgb(128, 99, 7),0 0.3em rgba(7, 7, 7, 0.966);
+    background-color: #fcf9ea;
+    font-size: 40px;
+    text-shadow: 0 0.1em rgb(58, 41, 25);
     }
     
     h2{
-    
         text-align: center;
         padding: 0px 0px;
-        border-radius: 50px;
-        
-    
-       
+        border-radius: 50px; 
     }
   
     .work1{
         text-align: center;
-        background-color: rgb(255, 255, 255);
         padding : 0px 0px;
-       
     }
     
     .큰배경{
         text-align: center;
-        background-color: rgb(233, 229, 216);
+        background-color: rgb(218, 211, 190);
         height: 500px;
         width: 900px;
         color:#42300d;
         padding : 40px 10px;
         /* border : 10px solid #f0c948; */
-        border-radius: 20px;
-        box-shadow: 0 0.1em #b4b2a8, 0 0.4em rgba(15, 15, 15, 0.281);
+        border-radius: 30px;
+        box-shadow: 0 0.1em #b4b2a8, 0 0.6em rgba(15, 15, 15, 0.425);
     }
     
     .mylink{
@@ -106,12 +110,10 @@
         margin:0;
         max-width:80%;
         border-radius: 40px;
-    
     }
     
     audio::-webkit-media-controls-panel{
         background-color:#c2b793;
-
     }
     
     audio::-webkit-media-controls-play-button{
@@ -127,7 +129,6 @@
     }
     
     .image{
-      
         width:200px;
         height: 180px;
         margin : 10px;
@@ -137,46 +138,95 @@
 
     button:active{
         margin-top: 3px;
-        border : 2px solid #f1c70b;
-        background-color: rgba(255, 232, 139, 0.678);
+        border : 4px solid #916e07;
+        background-color: rgba(189, 171, 100, 0.479);
         color:rgb(63, 46, 13);
-        box-shadow: none;
-
-
+        box-shadow: 0 0.2em #493c07, 0 0.2em rgb(0, 0, 0);
     }
     
     button{
-        box-shadow: 0 0.4em #f1c70b, 0 0.5em rgba(15, 15, 15, 0.281);
-        border : 2px solid #f1c70b;
-        background-color: rgba(255, 232, 139, 0.678);
-        color:rgb(63, 46, 13);
-        border-radius: 20px;
+        box-shadow: 0 0.4em #554a1c, 0 0.5em rgb(0, 0, 0);
+        border : 4px solid #916e07;
+        background-color: rgba(250, 248, 243, 0.664);
+        color:rgb(75, 43, 30);
+        border-radius: 50px;
         height: 30px; width:100px;
         margin-right:10px;
         transition-duration: 0.3s;
-        
+        font-family: 'SBAggroB';
+        font-size: 13px;
+            
     }
 
     .work{
         background-color: rgba(180, 176, 159, 0.678);
-
         margin-left: auto;
         margin-right: auto;
         width: 150px;
         border-radius: 10px;
         box-shadow: 0 0.2em #747160, 0 0.3em rgb(71, 68, 68);
-       
-        
-
     }
 
     .profil{
-
         margin-left: auto;
         margin-right: auto;
-
-
     }
+
+    #outer { width:100%; height:100%; position:absolute; top:0px; left:50%;
+        transform:translateX(-50%); border:0px solid #fff; overflow:hidden }
+      
+      .snowflake { height:100%; color: rgba(254, 255, 255, 0.76); font-size: 1em;
+        font-family: Arial; text-shadow: 0 0 1px rgba(0,0,0,0.1); }
+      
+      @-webkit-keyframes snowflakes-fall {
+          0% { top:-10% } 100% { top:800px }
+      }
+      @-webkit-keyframes snowflakes-shake {
+          0%, 100% { -webkit-transform:translateX(0); transform:translateX(0) }
+          50% { -webkit-transform:translateX(80px); transform:translateX(80px) }
+      }
+      
+      @keyframes snowflakes-fall {
+          0% { top:-10% } 100% { top:800px }
+      }@keyframes snowflakes-shake {
+          0%, 100% { transform:translateX(0) }
+          50% { transform:translateX(80px) }
+      }
+      
+      .snowflake{
+          position:absolute; top:-10%; z-index:9999; -webkit-user-select:none;
+          -moz-user-select:none; -ms-user-select:none; user-select:none; cursor:default;
+          -webkit-animation-name:snowflakes-fall, snowflakes-shake;
+          -webkit-animation-duration:10s, 3s; -webkit-animation-timing-function:linear,
+          ease-in-out; -webkit-animation-iteration-count:infinite, infinite;
+          -webkit-animation-play-state:running, running;animation-name:snowflakes-fall,
+          snowflakes-shake; animation-duration:10s, 3s; animation-timing-function:linear,
+          ease-in-out; animation-iteration-count:infinite, infinite;
+          animation-play-state:running, running
+      }
+      
+      .snowflake:nth-of-type(0) { left:1%;-webkit-animation-delay:0s, 0s; animation-delay:0s, 0s }
+      .snowflake:nth-of-type(1) { left:5%;-webkit-animation-delay:1s, 1s; animation-delay:1s, 1s }
+      .snowflake:nth-of-type(2) { left:10%;-webkit-animation-delay:6s, .5s; animation-delay:6s, .5s }
+      .snowflake:nth-of-type(3) { left:15%;-webkit-animation-delay:4s, 2s; animation-delay:4s, 2s }
+      .snowflake:nth-of-type(4) { left:20%;-webkit-animation-delay:2s, 2s; animation-delay:2s, 2s }
+      .snowflake:nth-of-type(5) { left:25%;-webkit-animation-delay:8s, 3s; animation-delay:8s, 3s }
+      .snowflake:nth-of-type(6) { left:30%;-webkit-animation-delay:6s, 2s; animation-delay:6s, 2s }
+      .snowflake:nth-of-type(7) { left:35%;-webkit-animation-delay:9.5s, 1s; animation-delay:9.5s, 1s }
+      .snowflake:nth-of-type(8) { left:40%;-webkit-animation-delay:1s,0s; animation-delay:1s, 0s }
+      .snowflake:nth-of-type(9) { left:45%;-webkit-animation-delay:3s, 1.5s; animation-delay:3s, 1.5s }
+      .snowflake:nth-of-type(10) { left:50%;-webkit-animation-delay:0s, 0s; animation-delay:0s, 0s }
+      .snowflake:nth-of-type(11) { left:55%;-webkit-animation-delay:1s, 1s; animation-delay:1s, 1s }
+      .snowflake:nth-of-type(12) { left:60%;-webkit-animation-delay:6s, .5s; animation-delay:6s, .5s }
+      .snowflake:nth-of-type(13) { left:65%;-webkit-animation-delay:4s, 2s; animation-delay:4s, 2s }
+      .snowflake:nth-of-type(14) { left:70%;-webkit-animation-delay:2s, 2s; animation-delay:2s, 2s }
+      .snowflake:nth-of-type(15) { left:75%;-webkit-animation-delay:8s, 3s; animation-delay:8s, 3s }
+      .snowflake:nth-of-type(16) { left:80%;-webkit-animation-delay:6s, 2s; animation-delay:6s, 2s }
+      .snowflake:nth-of-type(17) { left:85%;-webkit-animation-delay:2.5s, 1s; animation-delay:2.5s, 1s }
+      .snowflake:nth-of-type(18) { left:90%;-webkit-animation-delay:1s, 0s; animation-delay:1s, 0s }
+      .snowflake:nth-of-type(19) { left:95%;-webkit-animation-delay:3s, 1.5s; animation-delay:3s, 1.5s }
+       
+
 
    
     

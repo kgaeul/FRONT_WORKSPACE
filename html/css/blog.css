@@ -45,7 +45,7 @@
     
     .container{
         width: 920px;
-        background-color: rgb(238, 234, 218);
+        background-color: rgb(13, 14, 29);
         padding: 0px 10px;
     }
     
@@ -56,7 +56,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 300px;
-    color:#966c19;
+    color:#962819;
     border : 10px solid rgb(238, 183, 1);
     box-shadow: 0 0.3em rgb(128, 99, 7),0 0.3em rgba(7, 7, 7, 0.966);
     background-color: #fcf9ea;
@@ -77,14 +77,14 @@
     
     .큰배경{
         text-align: center;
-        background-color: rgb(218, 211, 190);
+        background-color: rgb(167, 165, 165);
         height: 500px;
         width: 900px;
-        color:#42300d;
+        color:#3a1515;
         padding : 40px 10px;
         /* border : 10px solid #f0c948; */
         border-radius: 30px;
-        box-shadow: 0 0.1em #b4b2a8, 0 0.6em rgba(15, 15, 15, 0.425);
+        box-shadow: 0 0.8em #000000, 0 0.6em rgba(15, 15, 15, 0.425);
     }
     
     .mylink{
@@ -145,10 +145,10 @@
     }
     
     button{
-        box-shadow: 0 0.4em #554a1c, 0 0.5em rgb(0, 0, 0);
-        border : 4px solid #916e07;
-        background-color: rgba(250, 248, 243, 0.664);
-        color:rgb(75, 43, 30);
+        box-shadow: 0 0.4em #644709, 0 0.5em rgb(0, 0, 0);
+        border : 4px solid #dfae10;
+        background-color: rgba(247, 236, 236, 0.664);
+        color:rgb(31, 10, 10);
         border-radius: 50px;
         height: 30px; width:100px;
         margin-right:10px;

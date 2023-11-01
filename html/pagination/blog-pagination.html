@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>블로그 메인</title>
+    </head>
+
+    <style>
+    @font-face {
+    font-family: 'KCC-Ganpan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    *{
+    font-family: 'KCC-Ganpan'; 
+    }
+
+    button{
+        background-color: rgb(214, 185, 228);
+        box-shadow: 0 0.2em rgb(122, 104, 228), 0 0.3em rgb(97, 95, 95);
+        border : 2px solid rgb(122, 104, 228);
+        border-radius: 20px;
+        transition-duration: 0.3s;
+        
+    }
+
+    button:active{
+        margin-top: 2px;
+    }
+
+    #pagination{
+        background-color: rgb(232, 213, 236);
+        height: 500px;
+        max-width: 900px;
+        padding-top: 10px;
+        text-align: center;
+
+    }
+    .게시판{
+        background-color: rgb(202, 201, 202);
+        margin-top:10px;
+        margin-bottom: 10px;
+        padding : 10px;
+        border-radius: 10%;
+
+    }
+
+    </style>
+
+    <body>
+    
+        <h1>블로그 메인</h1>
+        <button id ="createPostButton">게시글 작성하기</button>   
+        <div class="게시판">
+        <ul id = "blogPostList"> </ul>
+        </div>
+    
+        <div id="pagination">
+            <h2 id="currentPage">페이지1</h2>
+            <button id="prevPage">이전</button>
+            <button id="nextPage">다음</button>
+        </div>
+
+        <script>
+            const blogPostList = document.getElementById("blogPostList");
+            const createPostButton = document.getElementById("createPostButton");
+            let savePosts = JSON.parse(localStorage.getItem("blogPosts")) || [];
+
+            const itemsPerPage = 5;// 페이지 당 표시할 게시물 수
+            let currentPage=1; // 현재 페이지
+
+            /*
+            reverse() : 배열의 순서를 뒤집는 역할을 함
+            savePosts 배열을 역순으로 정렬해서 가장 최근에 작성한 게시물을 먼저 표시하도록 합니다.
+            */
+
+            savePosts = savePosts.reverse();
+
+            //페이지에 따라서 게시물을 표시
+            function displayPosts(page) {
+                const startIndex = (page - 1) * itemsPerPage;
+                const endIndex = startIndex + itemsPerPage;
+                const postsToDisplay = savePosts.slice(startIndex,endIndex);
+
+                blogPostList.innerHTML = '';
+
+                postsToDisplay.forEach(post => {
+                    const listItem = document.createElement("li");
+                    listItem.textContent = post.content;
+                    blogPostList.appendChild(listItem);
+                });
+
+                document.getElementById("currentPage").textContent=`페이지 ${page}`;
+                 }
+                //게시물 작성 버튼 클릭
+                createPostButton.addEventListener("click", function(){
+                    //새 게시물 작성 페이지로 이동
+                    window.location.href = "blog-post.html";
+                });
+
+                //이전버튼 클릭
+                document.getElementById("prevPage").addEventListener("click",function(){
+                    if(currentPage>1){
+                        currentPage --;
+                        displayPosts(currentPage);
+                    }
+                });
+
+                document.getElementById("nextPage").addEventListener("click",function(){
+                    if(currentPage<Math.ceil(savePosts.length / itemsPerPage)){
+                        currentPage ++;
+                        displayPosts(currentPage);
+                    }
+                });
+            
+            displayPosts(currentPage);
+        </script>
+    </body>
+
+</html>

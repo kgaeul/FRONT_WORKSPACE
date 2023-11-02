@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>게시물</title>
+        <style>
+
+        @font-face {
+        font-family: 'SBAggroB';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
+
+        *{
+            font-family: 'SBAggroB';
+        }
+
+        table{
+            width: 100%;
+          
+            margin: 20px;
+            background-color: rgb(247, 240, 230);
+            border-collapse: collapse;
+            /*
+            border-collapse : 표의 셀 경계를 병합하고 경계선을 단일 선으로 만듦
+            */
+            padding: 10px;
+            box-shadow: 0 0 10px  rgb(27, 26, 26);
+        }
+
+        th{
+            background-color: rgb(132, 135, 138);
+        }
+
+        td,th{
+            border:3px solid rgb(68, 64, 64);
+            padding: 10px;
+            text-align: center;
+            
+        }
+        td{
+            
+        }
+
+        /*
+        css는 태그 이름이나 class명 id명을 중복으로 사용해도 가능
+        단 내용 값이 겹치지 않는 한 중복으로 작성한 태그 내용 안에 있는
+        디자인이 모두 적용
+        */
+
+        </style>
+    </head>
+    <body>
+        <!--
+            table 태그 : 표의 시작을 나타내는 태그
+               tr 태그 : 표의 행(row) 정의하는 태그
+               th 태그 : 표의 머리글을 정의하는 태그
+                         각 열의 제목을 부여
+                         표의 머리글은 굵은 텍스트로 표시
+               td 태그 :  표의 데이터를 텍스트로 표시
+                         일반 텍스트로 표시      
+        -->
+        <table>
+            <tr>
+                <th>제목</th>
+                <th>글쓴이</th>
+            </tr>
+            <tr>
+                <td>즐거운 점심시간</td>
+                <td>점심에 퇴근하는 자</td>
+                
+            </tr>
+
+            <tr>
+                <td>점심에 퇴근하는 자</td>
+                <td>점심에 퇴근하는 자</td>
+            </tr>
+        </table>
+    </body>
+</html>

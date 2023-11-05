@@ -1,9 +1,14 @@
 body{
     background-color: rgb(1, 0, 17);
     margin: 0px;
+<<<<<<< HEAD
     height: 1100px;
     width:100%;
     position: absolute;
+=======
+    max-height: 1100px;
+    max-width:1000px;
+>>>>>>> 96f5814f5443594ddfe75197a522e7f59240bbcc
     }
 
 
@@ -12,26 +17,40 @@ h3{
     position: absolute;
     top: 60px;
     transform: translate( -50%, -50%);
+<<<<<<< HEAD
     font-size:3em;
+=======
+    font-size:2em;
+>>>>>>> 96f5814f5443594ddfe75197a522e7f59240bbcc
     color:rgb(255, 253, 253);
     font-family: 'iceJaram-Rg';
 }
 h2{
+    
     font-family: 'HakgyoansimWoojuR';
     left: 50%;
     position: absolute;
+<<<<<<< HEAD
     top: 50%;
+=======
+    top: 70%;
+>>>>>>> 96f5814f5443594ddfe75197a522e7f59240bbcc
     width:700px;
     height: 800px;
     transform: translate( -50%, -50%);
     font-size:35px;
     color:black;
+<<<<<<< HEAD
     background-color: rgba(255, 255, 255, 0.781);
     margin-top: 56px;
+=======
+    background-color: rgb(253, 253, 253);
+    
+>>>>>>> 96f5814f5443594ddfe75197a522e7f59240bbcc
     padding: 10px;
     text-align: center;
     border-radius: 20px;
-    box-shadow: 0 0 70px rgb(255, 252, 252);
+    box-shadow: 0 0 50px rgb(255, 252, 252);
   }
 
   .내용{

@@ -1,7 +1,3 @@
-
-
-
-
 var c = document.getElementById('canv'), 
     $ = c.getContext("2d");
 var w = c.width = window.innerWidth, 
@@ -61,6 +57,3 @@ window.onresize = () => {
   
     Snow.make();
   };
-
-
-  

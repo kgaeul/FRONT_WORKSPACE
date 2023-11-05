@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>요소의 총 갯수 구하기</title>
+        <style>
+            @font-face {
+                font-family: 'KOTRAHOPE';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRAHOPE.woff2') format('woff2');
+                font-weight: normal;
+                font-style: normal;
+            }
+            *{
+                font-family: 'KOTRAHOPE'; 
+            }
+
+
+            h1{
+                text-shadow: 0px 2px 0px rgb(0, 0, 0);
+                color:rgb(113, 167, 248);
+            }
+
+            body{
+                background-color: rgb(220, 238, 245);
+                margin :20px;
+                box-shadow: 0px 0px 10px gray;
+                padding: 30px;
+                padding-top: 5px;
+            }
+
+            form{
+                background-color: rgb(253, 253, 253);
+                margin-bottom: 10px;
+                padding: 19px;
+            }
+
+            button{
+                float:right;
+                
+                
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <h1>li 요소 선택한 후 선택된 갯수 구하기</h1>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+        </ul>
+
+        <button id="btn1">li 갯수를 확인하기</button>
+        <p id="len"></p>
+        <br><br><br><br><br>
+        <h1>form li 요소 선택하기</h1>
+        <form>
+
+            <input type="checkbox" name="inputName" value="one">
+            <span>피카츄</span><br>
+            <input type="checkbox" name="inputName" value="two">
+            <span>이브이</span><br>
+            <input type="checkbox" name="inputName" value="three">
+            <span>꼬부기</span><br>
+            <input type="checkbox" name="inputName" value="three">
+            <span>에몽가</span><br>
+        </form>
+
+        <button id="btn2">체크 확인 버튼</button>
+        <script>
+            $(function(){
+                $("#btn2").on("click",function(){
+                        $(":checked").next().text("변신!");
+                });
+            });
+
+            //$(":checked") : 현재 html에서 선택된 모든 체크박스를 선택하는 부분 
+            //next() : 체크된 체크박스 요소(태그) 다음에 오는 요소(태그/span) 선택
+            //text(":체크확인완료") : 선택된 요소에 새로운 텍스트를 넣어주는 부분
+
+            //li 요소 갯수 세는 script
+            $(function(){   //<li>태그 요소를 모두 선택해서 변수 items에 저장
+                var items = $("li");
+                $("#btn1").on("click",function(){
+                    $("#len").text("li의 총 갯수는 "+items.length+" 개 입니다!");
+
+                    });
+                });
+           
+        </script>
+    </body>
+</html>

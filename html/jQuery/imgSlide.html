@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script src="./js/jquery-3.7.1.js"></script>
+        <style>
+
+        #imageSlider{
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+            padding: 10px;
+            background-color: rgb(251, 252, 253);
+            box-shadow: 0px 1px 6px gray;
+
+            /*
+            overflow: hidden; : 특정너비와 높이를 벗어나면 초과한 부분을 숨김
+            position: relative; 상대적인 위치를 설정해줌
+            
+            */
+        }
+
+        img{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+           
+        }
+        </style>
+    </head>
+    <body>
+        <div id="imageSlider">
+            <img src="./img/미친개.jpg" style="width: 300px; height: 200px;">
+            <img src="./img/에몽가1.jpg" style="width: 300px; height: 230px;">
+            <img src="./img/에몽가2.jpg">
+            <img src="./img/에몽가3.jpg">
+            <img src="./img/에몽가4.jpg">
+
+        </div>
+
+        <script>
+            $(function(){
+                let currentNumber=0;
+                let images = $("img");
+                images.hide(); //hide() 숨김처리 할 때 사용하는 메서드
+                //eq 어떤 특정 값의 요소를 보이게 함
+                //eq(currentNumber) : currentNumber값의 요소를 보이게 함
+                //show() : 보임처리 할 때 사용하는 메서드
+
+                images.eq(currentNumber).show();
+
+                function nextImage(){
+                //fadeOut(숫자값) : 1초 동안 서서히 투명하게 만들어줌
+                images.eq(currentNumber).fadeOut(1000);
+                
+                //다음 이미지로 넘어가는 변수생성과 동시에 이미지 수가 n개일 경우[1,2,3,4,5] 4번에 도달했을 때 0번 이미지로 돌아가게 함
+                currentNumber=(currentNumber+1)%images.length;
+                images.eq(currentNumber).fadeIn(1000);
+
+                //setInterval : JavaScript 안에서 사용되는 타이머 함수
+                //일정한 시간 간격을 두고 반복적으로 함수를 실행할 때 사용
+                }
+                setInterval(nextImage,2000);
+            });
+
+
+        </script>
+    </body>
+</html>

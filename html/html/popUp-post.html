@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+    <head>
+        <title> 팝업게시글 </title> 
+        <link rel ="stylesheet" href="../html/css/blog.css">
+    </head>
+
+    <body>
+
+        <div id="outer">
+            <div class="snowflakes" aria-hidden="true">
+            <div class="snowflake" style="font-size: 16px">❆</div>
+            <div class="snowflake" style="font-size: 40px">.</div>
+            <div class="snowflake" style="font-size: 16px">❆</div>
+            <div class="snowflake" style="font-size: 12px">❆</div>
+            <div class="snowflake" style="font-size: 12px">❆</div>
+            <div class="snowflake" style="font-size: 16px">❆</div>
+            <div class="snowflake" style="font-size: 12px">❆</div>
+            <div class="snowflake" style="font-size: 12px">❆</div>
+            <div class="snowflake" style="font-size: 12px">❆</div>
+            <div class="snowflake" style="font-size: 12px">❆</div>
+            <div class="snowflake" style="font-size: 12px">❆</div>
+            <div class="snowflake" style="font-size: 20px">❆</div>
+            <div class="snowflake" style="font-size: 12px">❆</div>
+            <div class="snowflake" style="font-size: 12px">❆</div>
+            <div class="snowflake" style="font-size: 20px">❆</div>
+            <div class="snowflake" style="font-size: 12px">❆</div>
+            <div class="snowflake" style="font-size: 12px">❆</div>
+            <div class="snowflake" style="font-size: 20px">❆</div>
+            <div class="snowflake" style="font-size: 12px">❆</div>
+            <div class="snowflake" style="font-size: 16px">❆</div>
+            <div class="snowflake" style="font-size: 40px">.</div>
+            <div class="snowflake" style="font-size: 16px">❆</div>
+            <div class="snowflake" style="font-size: 16px">❆</div>
+            <div class="snowflake" style="font-size: 50px">.</div>
+            <div class="snowflake" style="font-size: 16px">❆</div>
+            <div class="snowflake" style="font-size: 16px">❆</div>
+            <div class="snowflake" style="font-size: 40px">.</div>
+            <div class="snowflake" style="font-size: 16px">❆</div>
+            </div>
+          </div> 
+  
+    
+
+
+        <div class="container">
+        <div class="work1">
+        <img src="./사진/피카츄.png" style=" height :200px">
+        <h1>어텀이네 블로그</h1>
+        
+        </div>
+        
+        <ul id =  "post-list">
+            <!--게시글 목록이 표시되는 공간-->
+        </ul>
+            <div class="buttons">
+            <h2>
+                <button type="button" onclick="location.href='./pagination/blog-post.html' "> 게시물 작성 </button> 
+                <button id="log-in"> 로그인 </button>
+                <button onclick="logout()"> 로그아웃 </button>
+                <button id="find-id" > 아이디 찾기 </button> 
+                <button id="find-pw"> 비밀번호 찾기 </button>
+                <button type="button" onclick="location.href='./File-Upload/imgUpload.html' ">사진 등록</button>
+            </div>
+        </h2>
+
+        <div class="큰배경">
+                <aside>
+                <h3>어텀이네 블로그에 오신 것을 환영합니다.</h3>
+                    <img src ="./에몽가1.jpg" style="width:80%;">
+                <!-- <div id="pagination">
+        
+                    <div class="img-container">
+                    
+                    </div>
+
+                    <button id="prevPage">이전</button> 
+                    <button  id="nextPage"> 다음</button>
+                    
+                </div> -->
+        
+                    <h2>노래재생</h2>
+                    <audio controls>
+                        <source src="지브리.mp3" type="audio/mpeg">
+                    </audio>
+                </aside>
+           
+
+            <div class="회원가입">
+                
+                <form onsubmit="return submitPassword()">
+                    <div class="work">
+                    <h2>회원가입</h2>
+                    </div>
+                    <div class="idpw">
+                    <label for="username">아이디 : </label>
+                    <input type = "text" id="username">
+                    <br>
+                    <br>
+                    <label for="password">비밀번호 : </label>
+                    <input type="password" id="password" onclick="pwmsg()">
+                    <h5 style="color:rgb(180, 65, 65);">영문자 특수문자 숫자 포함해서 8~32자 사이로 만드세요</h5>
+                    <!--    
+                    <p id="pm></pm>
+                    p태그 안에는 비밀번호가 잘못 입력되었을 때나 비밀번호 유효한 입력을 유도하기 위해 보여지는 태그"
+                    -->
+                    <p id="pm"></p><br>
+        
+                    <label for="confirmpassword">비밀번호 확인 : </label>
+                    <input type="password" id="confirmpassword"><br>
+                    <br>
+                    <input type="submit" value="제출">
+                    </div>
+                </div>
+                </form>
+
+        </div>
+
+        <div class="mylink">
+        <button type="button" onclick="location.href= 'https://instagram.com/eul_x?igshid=MzMyNGUyNmU2YQ%3D%3D&utm_source=qr' ">인스타그램</button>
+        <button type="button" onclick="location.href='https://blog.naver.com/gaury0722/223065133384' ">네이버 블로그</button>
+        <button type="button" onclick="location.href='https://autumny.tistory.com' ">티스토리</button>
+        </div>      
+    </div>
+
+  
+    
+
+    <script src="../html/js/blog.js"></script>
+
+    </body>
+
+</html>

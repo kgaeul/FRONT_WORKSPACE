@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <style>
+            @font-face {
+            font-family: 'DOSPilgiMedium';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/DOSPilgiMedium.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            }
+            *{
+                font-family: 'DOSPilgiMedium';  
+            }
+            p{
+                display:none;/*display:none 주로 화면에서 숨길 때 사용*/
+                color:rgb(134, 184, 218);
+                text-shadow: 0px 2px 0px black;
+                font-size: 20px;
+            }
+            body{
+                background-color: rgb(243, 217, 217);
+
+                margin: 5%;
+                height: 600px;
+                box-shadow: 0px 20px 10px gray;
+            }
+        </style>
+
+        <script src="./js/jquery-3.7.1.js"></script>
+    </head>
+    <body>
+        <button id="toggleButton">토글을 보려면 클릭하세여~ ~</button>
+        <P>Toggle 이란? <br>
+        어떤 것을 켜거나 끌 수 있게 해주는 등 두 가지 다른 상태로 전환하는 작업을 해줌
+        jQuery  toggle()(->메소드임)은 숨시거나 보여주는 작업을 나타냄
+        </P>
+        <h1>엥 이게 뭐야!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</h1>
+
+        <script>
+
+            /*
+             $(document).ready(function(){ 이 코드와
+             $(function(){      이 코드는 동일한 코드~~~~~~~~
+             를축소하여 작성한 코드
+            */
+            $(function(){
+                $("#toggleButton"). on("click",function(){
+                    $("p").toggle();
+                });
+            });
+
+        
+        </script>
+
+    </body>
+
+</html>
